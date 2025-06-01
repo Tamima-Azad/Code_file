@@ -1,8 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    a=10;b=20;
-    printf("%d",a+b);
+   long long int a=5150000000;
+    printf("%lld",a);
     return 0;
+
 }
