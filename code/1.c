@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-   long long int a=5150000000;
-    printf("%lld",a);
+    int a,b;
+    scanf("%d %d",&a,&b);
+    if(a>=b){ printf("%d",a-b); }
+    else if(b>=a){ printf("%d",b-a); }
     return 0;
-
 }
