@@ -1,33 +1,24 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int m,n,i,j;
-    scanf("%d %d",&m,&n);
-    int a[100][100];
-    for(i=0; i<m; i++)
-    {
-        for(j=0; j<n; j++)
+    char a[100],b[100];
+    gets(a);
+    int l,x=0;
+    strlwr(a);
+    l=strlen(a);
+    for(int i=0;i<l;i++){
+        if(a[i]=='a'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='u')
         {
-            scanf("%d",&a[i][j]);
-
+            b[x]=a[i];
+            x++;
         }
+        b[x]='\0';
     }
-    for(i=0; i<m; i++)
-    {
-        for(j=0; j<n; j++)
-        {
-            if(j>=i)
-            {
-                printf("%d\t",a[i][j]);
-            }
-            else
-            {
-                printf("0\t");
-            }
+        puts(b);
 
 
-        }
-        printf("\n");
-    }
 
+    return 0;
 }
+

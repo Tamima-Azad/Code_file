@@ -1,28 +1,26 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int n,c;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++)
+    int a=0,b=0,c=0,d=0;
+    char s[100];
+    gets(s);
+    int len=strlen(s);
+    strlwr(s);
+    for(int i=0;i<len;i++)
     {
-        scanf("%d",&arr[i]);
-    }
-    for(int i=0;i<n;i++)
-    {
-        for(int j=i+1;j<n;)
-        {
-            if(arr[i]==arr[j]){
-               for(int k=j;k<n-i;k++){
-                arr[k]=arr[k+1];
-               }
-               n--;
-            }
-            else j++;
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'){
+            a++;
+        }
+        else if(s[i]>=48&&s[i]<=57){
+            b++;
+        }
+        else if(s[i]==' '){
+            c++;
+        }
+        else {
+            d++;
         }
     }
-     for(int i=0;i<n;i++)
-    {
-        printf("%d ",arr[i]);
-    }
+    printf("Vowels=%d Digits=%d White space=%d Consonants=%d",a,b,c,d);
 }

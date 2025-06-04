@@ -1,23 +1,16 @@
+
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int n,c;
-    scanf("%d",&n);
-    int arr[n];
-    for(int i=0;i<n;i++)
+    int c;
+    char a[100],b;
+    gets(a);
+    int l=strlen(a);
+    scanf("%c",&b);
+    for(int i=0;i<=l;i++)
     {
-        scanf("%d",&arr[i]);
+        if(a[i]==b) c++;
     }
-    for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<n;j++)
-        {
-            if(arr[i]<arr[j]){
-                c=arr[i];
-                arr[i]=arr[j];
-                arr[j]=c;
-            }
-        }
-    }
-    printf("2nd smallest Numnber = %d",arr[1]);
+    printf("%d",c);
 }

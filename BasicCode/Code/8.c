@@ -1,33 +1,24 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int r,c;
-    printf("Enter the number of row and col = ");
-    scanf("%d%d",&r,&c);
-    int mat1[r][c];
-    printf("Enter matrices = \n");
-    if(r==2&&c==2){
-    for(int i=0; i<r; i++)
-    {
-        for(int j=0; j<c; j++)
-        {
-            scanf("%d",&mat1[i][j]);
-        }
-    }
-    int det;
-    det=(mat1[0][0]*mat1[1][1])-(mat1[0][1]*mat1[1][0]);
-    printf("%d",det);
-}
-else if(r==3&&c==3)
-{
-   for(int i=0; i<r; i++)
-    {
-        for(int j=0; j<c; j++)
-        {
-            scanf("%d",&mat1[i][j]);
-        }
-    }
-}int det;
-det=((mat1[0][0]*(mat1[1][1]*mat1[2][2]-mat1[2][1]*mat1[1][2]))+(mat1[0][1]*(mat1[1][0]*mat1[2][2]-mat1[2][0]*mat1[1][2]))+mat1[0][2]*(mat1[1][0]*mat1[2][1]-mat1[2][0]*mat1[1][2]));
-printf("Determinant of 3*3 mattrix = %d",det);
+    int s=0,i=0;
+    char a[101],c[53];
+    gets(a);
+    int l=strlen(a);
+    for( int j=65;j<=90;j++){
+       c[i]=j ;
+       i++;}
+    int k=26;
+    for(int j=97;j<=122;j++){
+        c[k]=j;
+        k++;}
+    for(int j=0;j<l;j++){
+        for(int t=0;t<52;t++){
+            if(a[j]==c[t]){
+                c[t]='2';}}}
+    for(int j=0;j<52;j++){
+        if(c[j]=='2'){ s++;}}
+    printf("%d",s);
+    return 0;
 }

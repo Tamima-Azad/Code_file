@@ -1,25 +1,12 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
-    int m,n,i,j;
-    scanf("%d %d",&m,&n);
-    int a[100][100],b[100][100];
-    for(i=0;i<m;i++)
-    {
-        for(j=0;j<n;j++){
-        scanf("%d",&a[i][j]);
-
-        }
-    }
-    for(i=0;i<m;i++)
-    {
-        for(j=0;j<n;j++){
-        b[i][j]=a[j][i];
-
-
-        printf("%d ",b[i][j]);
-        }
-        printf("\n");
-    }
-
+    char a[100],b[100];
+    gets(a);
+    gets(b);
+    strcat(a,b);
+    puts(a );
+    puts(b);
 }
+
