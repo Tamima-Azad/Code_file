@@ -3,7 +3,7 @@ int main()
 {
     int m,n,i,j;
     scanf("%d %d",&m,&n);
-    int a[100][100],b[100][100];
+    int a[100][100];
     for(i=0;i<m;i++)
     {
         for(j=0;j<n;j++){
@@ -14,10 +14,15 @@ int main()
     for(i=0;i<m;i++)
     {
         for(j=0;j<n;j++){
-        b[i][j]=a[j][i];
+        if(j<=i){
+            printf("%d ",a[i][j]);
+        }
+        else
+        {
+            printf("0 ");
+        }
 
-
-        printf("%d ",b[i][j]);
+        //printf("%d ",a[i][j]);
         }
         printf("\n");
     }

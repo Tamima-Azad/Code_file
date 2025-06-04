@@ -1,18 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n,m;
-    scanf("%d %d",&n,&m);
-    for(int i=n;i<=m;i++)
+    int ind,v,n;
+    int a[100];
+    scanf("%d %d",&ind,&v);
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
     {
-        int x;
-        for(int j=1;j<=10;j++)
-        {
-            x=i*j;
-            printf("%d*%d=%d ",i,j,x);
-        }
-        printf("\t\n");
-
+        a[i]=i+1;
+        printf("index = %d value = %d ",i,a[i]);
     }
-    return 0;
+    printf("\n \n");
+    for(int i=n-1;i>ind;i--)
+    {
+        a[i+1]=a[i];
+    }
+    a[ind]=v;
+    for(int i=0;i<n;i++)
+    {
+        printf("index =%d value = %d ",i,a[i]);
+    }
 }
