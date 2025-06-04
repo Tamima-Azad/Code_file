@@ -1,11 +1,22 @@
 #include<stdio.h>
-int a(int w,int l)
+int prime(int a)
 {
-    return w*l;
+  static int i=2;
+  if(a%i!=0){
+      i++;
+      if(a>i)
+    prime(a);
+  }
+  else
+  return 0;
 }
 int main()
 {
-    int w,l;
-    scanf("%d %d",&w,&l);
-    printf("%d",a(w,l));
+    int n,flag;
+    scanf("%d",&n);
+    flag=prime(n);
+    if(flag ==0) printf("Not prime");
+    else printf("Prime");
+
+
 }

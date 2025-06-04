@@ -1,12 +1,14 @@
 #include<stdio.h>
-#define pi 3.1416
-float area(int r)
+double power(double n,double p)
 {
-    return pi*r*r;
+    if(p==0) return 1.0;
+    else
+       return n*power(n,p-1);
 }
 int main()
 {
-    int r;
-    scanf("%d",&r);
-    printf("%.2f",area(r));
+    double n,p;
+    scanf("%lf %lf",&n,&p);
+    double r=power(n,p);
+    printf("%.2lf",r);
 }

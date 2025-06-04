@@ -1,14 +1,17 @@
 #include<stdio.h>
-int s(int a,int b){
-    return a-b;
-    }
-    int main()
-    {
-        int x,y;
-        scanf("%d %d",&x,&y);
-        int sub=s(x,y);
-        printf("%d",sub);
-    }
-
-
-
+int digitcount(int a)
+{
+   static int c=0;
+        if(a!=0)
+        {
+             c++;
+             digitcount(a/=10);
+        }
+        return c;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",digitcount(n));
+}

@@ -1,14 +1,20 @@
 #include<stdio.h>
-int mx(int x,int y)
+int digitrev(int a)
 {
-    if(x>y) return x;
-    else return y;
+   static int s=0;
+
+        if(a!=0)
+        {
+             s=s*10+a%10;
+             digitrev(a/=10);
+
+        }
+        return s;
 }
-    int main()
-    {
-        int a,b;
-        scanf("%d %d",&a,&b);
-        int max=mx(a,b);
-        printf("%d",max);
-    }
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",digitrev(n));
+}
 

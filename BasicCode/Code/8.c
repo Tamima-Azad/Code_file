@@ -1,12 +1,19 @@
+
 #include<stdio.h>
-int min(int a,int b,int c)
+int digitcount(int a)
 {
-    int min=(a<b)?(a<c?a:c):(b<c?b:c);
-    return min;
+   static int s=0;
+
+        if(a!=0)
+        {
+             s=s+a%10;
+             digitcount(a/=10);
+        }
+        return s;
 }
 int main()
 {
-   int x,y,z;
-   scanf("%d %d %d",&x,&y,&z);
-   printf("%d",min(x,y,z));
+    int n;
+    scanf("%d",&n);
+    printf("%d",digitcount(n));
 }

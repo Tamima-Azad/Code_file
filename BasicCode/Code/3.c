@@ -1,14 +1,19 @@
 #include<stdio.h>
-float s(int a,int b){
-    return a/b;
-    }
-    int main()
-    {
-        int x,y;
-        scanf("%d %d",&x,&y);
-        printf("%.2f",s(x, y));
+int digitsum(int a)
+{
+   static int s=0;
 
-    }
+        if(a!=0)
+        {
+             s=s+a%10;
+             digitsum(a/=10);
 
-
-
+        }
+        return s;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    printf("%d",digitsum(n));
+}

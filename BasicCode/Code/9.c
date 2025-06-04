@@ -1,13 +1,15 @@
 #include<stdio.h>
-int mx(int a,int b,int c)
+int gcd(int n1,int n2)
 {
-    int mx=(a>b)?(a>c?a:c):(b>c?b:c);
-    return mx;
+    if(n2!=0){
+        return gcd(n2,n1%n2);
+    }
+    else return n1;
 }
 int main()
 {
-   int x,y,z;
-   scanf("%d %d %d",&x,&y,&z);
-   printf("%d",mx(x,y,z));
+    int n1,n2;
+    scanf("%d %d",&n1,&n2);
+    int r=gcd(n1,n2);
+    printf("%d",r);
 }
-

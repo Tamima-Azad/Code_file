@@ -1,14 +1,15 @@
 #include<stdio.h>
-int min(int x,int y)
+int fib(int a)
 {
-    if(x<y) return x;
-    else return y;
+    if(a<=1) return 1;
+    else return fib(a-1)+fib(a-2);
 }
-    int main()
-    {
-        int a,b;
-        scanf("%d %d",&a,&b);
-        printf("%d",min(a,b));
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        printf("%d ",fib(i));
     }
-
+}
 
