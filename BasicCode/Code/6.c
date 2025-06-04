@@ -1,22 +1,22 @@
+
 #include<stdio.h>
-int prime(int a)
-{
-  static int i=2;
-  if(a%i!=0){
-      i++;
-      if(a>i)
-    prime(a);
-  }
-  else
-  return 0;
-}
-int main()
-{
-    int n,flag;
-    scanf("%d",&n);
-    flag=prime(n);
-    if(flag ==0) printf("Not prime");
-    else printf("Prime");
-
-
+//#include<stdlib.h>+
+//#include<string.h>
+//#include<ctype.h>
+#include<math.h>
+int main(){
+    int n, m, i, j, c=0;
+    scanf("%d%d", &m, &n);
+    int a[m], b[n];
+    for(i=1; i<=m; i++) scanf("%d", &a[i]);
+    for(i=1; i<=n; i++) scanf("%d", &b[i]);
+    for(i=1; i<=m; i++){
+        for(j=1; j<=n; j++){
+            if(a[i]==b[j]){
+                c++;
+            }
+        }
+    }
+    if(c==n) printf("YES");
+    else printf("NO");
 }

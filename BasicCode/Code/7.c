@@ -1,14 +1,22 @@
 #include<stdio.h>
-double power(double n,double p)
-{
-    if(p==0) return 1.0;
-    else
-       return n*power(n,p-1);
-}
-int main()
-{
-    double n,p;
-    scanf("%lf %lf",&n,&p);
-    double r=power(n,p);
-    printf("%.2lf",r);
+int main(){
+    int a, b,c=0,d,e;
+    scanf("%d%d", &a, &b);
+    if(a>b){
+        d=a;
+        a=b;
+        b=d;
+    }
+    for(int x=a; x<=b; x++){
+        int s=0;
+        for(int y=2; y<x; y++){
+            if(x%y==0){
+                s++;
+            }
+        }
+        if(s==0){
+                c++;
+            }
+    }
+    printf("%d", c);
 }

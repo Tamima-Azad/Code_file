@@ -1,19 +1,25 @@
 #include<stdio.h>
-int factorial(int a)
-{
-         if(a==1)
-            return 1;
-         else if(a<0)
-            printf("Not possible");
-
-         else
-            return(a*factorial(a-1));
-}
-
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    printf("%d",factorial(n));
+    int m,n,flag=0,c=0;
+    scanf("%d %d",&m,&n);
+    if(m<n){
+    for(int i=m;i<=n;i++){
+        if(n%i!=0){
+            flag=1;
+            c++;
+        }}
+
+    }
+    else if(m>n){
+        for(int i=n;i<=m;i++){
+            if(n%i==0){
+                    flag=0;
+                c++;
+            }
+        }
+    }
+    printf("%d",c);
     return 0;
 }
+

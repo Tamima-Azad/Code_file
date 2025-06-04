@@ -1,19 +1,27 @@
 #include<stdio.h>
-int digitsum(int a)
-{
-   static int s=0;
-
-        if(a!=0)
-        {
-             s=s+a%10;
-             digitsum(a/=10);
-
-        }
-        return s;
-}
+#include<math.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    printf("%d",digitsum(n));
+    int a,b,c=0;
+    scanf("%d %d",&a,&b);
+    int m[a],n[b];
+
+    for( int i=0;i<a;i++){
+            scanf("%d",&m[i]);
+
+    }
+    for(int i=0;i<b;i++){
+        scanf("%d",&n[i]);
+    }
+    for(int i=0;i<a;i++){
+        for(int j=0;j<b;j++){
+            if(m[i]==n[j]){
+              c++;
+            }
+        }
+    }
+   if(c==b){printf("YES");}
+    else printf("NO");
+    return 0;
 }
+
