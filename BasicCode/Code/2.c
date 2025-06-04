@@ -1,10 +1,14 @@
-
 #include<stdio.h>
-#include<string.h>
-int main()
-{
-    char a[100];
-    scanf("%s",&a);
-    printf("%s ",strupr(a));
-    return 0;
-}
+int s(int a,int b){
+    return a-b;
+    }
+    int main()
+    {
+        int x,y;
+        scanf("%d %d",&x,&y);
+        int sub=s(x,y);
+        printf("%d",sub);
+    }
+
+
+

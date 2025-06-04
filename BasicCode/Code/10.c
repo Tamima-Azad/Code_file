@@ -1,10 +1,14 @@
 #include<stdio.h>
-#include<string.h>
+int mid(int a,int b,int c)
+{
+    int mid=(a>b)?(b>c?b:a>c?c:a):(a>c?a:b>c?c:b);
+    return mid;
+}
 int main()
 {
-    char a[100];
-    gets(a);
-    strrev(a);
-    puts(a);
-
+   int x,y,z;
+   scanf("%d %d %d",&x,&y,&z);
+   printf("%d",mid(x,y,z));
 }
+
+

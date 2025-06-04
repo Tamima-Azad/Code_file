@@ -1,8 +1,13 @@
 #include<stdio.h>
-#include<string.h>
+int mx(int a,int b,int c)
+{
+    int mx=(a>b)?(a>c?a:c):(b>c?b:c);
+    return mx;
+}
 int main()
 {
-    char a[100];
-    scanf("%s",&a);
-    printf("%s",a);
+   int x,y,z;
+   scanf("%d %d %d",&x,&y,&z);
+   printf("%d",mx(x,y,z));
 }
+

@@ -1,10 +1,14 @@
-
 #include<stdio.h>
-#include<string.h>
-int main()
-{
-    char a[100];
-    scanf("%s",&a);
-    printf("%d ",strlen(a));
-    return 0;
-}
+float s(int a,int b){
+    return a/b;
+    }
+    int main()
+    {
+        int x,y;
+        scanf("%d %d",&x,&y);
+        printf("%.2f",s(x, y));
+
+    }
+
+
+

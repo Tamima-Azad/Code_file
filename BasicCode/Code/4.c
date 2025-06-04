@@ -1,13 +1,14 @@
 #include<stdio.h>
-#include<string.h>
-int main()
+int mx(int x,int y)
 {
-    char a[100],b[100];
-    gets(a);
-    gets(b);
-    strcpy(a,b);
-    puts(a);
-    puts(b);
-    return 0;
+    if(x>y) return x;
+    else return y;
 }
+    int main()
+    {
+        int a,b;
+        scanf("%d %d",&a,&b);
+        int max=mx(a,b);
+        printf("%d",max);
+    }
 

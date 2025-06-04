@@ -1,12 +1,11 @@
 #include<stdio.h>
-#include<string.h>
+int a(int w,int l)
+{
+    return w*l;
+}
 int main()
 {
-    char a[100];
-    scanf("%s",&a);
-    for(int i=0;i<strlen(a);i++){
-        printf("%d ",a[i]);
-    }
-    return 0;
+    int w,l;
+    scanf("%d %d",&w,&l);
+    printf("%d",a(w,l));
 }
-

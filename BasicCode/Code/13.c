@@ -1,16 +1,14 @@
 #include<stdio.h>
-#include<string.h>
-void rev(a )
+float sd(int x)
 {
-
-    strrev(a);
-    puts(a);
+    return sqrt(x);
 }
 int main()
 {
-    char a[100];
-    gets(a);
-    rev( a);
-
-    return 0;
+    int a;
+    scanf("%d",&a);
+    while(a!=0){
+     printf("%.2f\n",sd(a%10));
+     a=a/10;
+    }
 }

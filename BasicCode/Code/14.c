@@ -1,20 +1,17 @@
 #include<stdio.h>
-#include<string.h>
+int rev(int x)
+{
+    int s,r;
+    while(x!=0){
+     r=x%10;
+     s=s*10+r;
+     x/=10;
+    }
+    return s;
+}
 int main()
 {
-    char a[100],b[100];
-    int j=0;
-    gets(a);
-    for(int i=0;i<strlen(a);i++)
-    {
-        if(a[i]>=65&&a[i]<=122||a[i]==' '){
-            b[j]=a[i];
-            j++;
-        }
-        else
-            continue;
-    }
-    a[j]='\0';
-    puts(b);
+    int a;
+    scanf("%d",&a);
+    printf("%d",rev(a));
 }
-

@@ -1,16 +1,15 @@
-
 #include<stdio.h>
-#include<string.h>
+int fac(int a)
+{
+    int m=1;
+    for(int i=1;i<=a;i++){
+    m=m*i;
+    }
+    return m;
+}
 int main()
 {
-    int c;
-    char a[100],b;
-    gets(a);
-    int l=strlen(a);
-    scanf("%c",&b);
-    for(int i=0;i<=l;i++)
-    {
-        if(a[i]==b) c++;
-    }
-    printf("%d",c);
+    int x;
+    scanf("%d",&x);
+    printf("%d",fac(x));
 }
